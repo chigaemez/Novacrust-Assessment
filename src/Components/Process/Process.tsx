@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { BlackTrans, CheckCircle, Good } from '../../assets/Images'
 import { Copy } from '../../assets/Icons'
 import { useNavigate } from 'react-router-dom'
