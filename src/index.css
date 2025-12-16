@@ -1,0 +1,71 @@
+@import "tailwindcss";
+:root {
+  font-family: "outfit", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+@font-face {
+  font-family:outfitblack;
+  src: url("/outfit/Outfit-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family:outfitbold;
+  src: url("/outfit/Outfit-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family:outfitextrabold;
+  src: url("/outfit/Outfit-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family:outfitextralight;
+  src: url("/outfit/Outfit-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family:outfitlight;
+  src: url("/outfit/Outfit-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family:outfitmedium;
+  src: url("/outfit/Outfit-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family:outfitregular;
+  src: url("/outfit/Outfit-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family:outfitsemibold;
+  src: url("/outfit/Outfit-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family:outfitthin;
+  src: url("/outfit/Outfit-Thin.ttf") format("truetype");
+}
+
+@theme {
+  --font-outfitblack: outfitblack, sans-serif;
+  --font-outfitbold: outfitbold, sans-serif;
+  --font-outfitextrabold: outfitextrabold, sans-serif;
+  --font-outfitextralight: outfitextralight, sans-serif;
+  --font-outfitlight: outfitlight, sans-serif;
+  --font-outfitmedium: outfitmedium, sans-serif;
+  --font-outfitregular: outfitregular, sans-serif;
+  --font-outfitsemibold: outfitsemibold, sans-serif;
+  --font-outfitthin: outfitthin, sans-serif;
+}
+
+
+@layer base {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
