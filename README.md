@@ -1,73 +1,132 @@
-# React + TypeScript + Vite
+💸 Novacrust – Recipient Details Flow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Novacrust is a modern frontend application built with React, TypeScript, Tailwind CSS, and Context API.
+It focuses on a smooth and user-friendly recipient details flow, including bank selection, account number validation, and account name resolution.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ Bank selection dropdown (mock Nigerian banks)
 
-## React Compiler
+✅ Account number input with validation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ Auto-fetching account name (loading state supported)
 
-## Expanding the ESLint configuration
+✅ Form validation with inline error messages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ Responsive design (mobile → desktop)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+✅ Clean UI built with Tailwind CSS
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+✅ Global state management using Context API
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+✅ Client-side navigation with React Router
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🛠️ Tech Stack
+
+React
+
+TypeScript
+
+Tailwind CSS
+
+Context API
+
+React Router
+
+Vite (for fast development)
+
+📂 Project Structure
+src/
+│── assets/           # Icons and images
+│── Context/          # Context API store
+│── Stores/
+│   └── Datas.ts      # Mock banks data
+│── pages/
+│   └── Recipient_Details.tsx
+│── routes/           # App routes
+│── App.tsx
+│── main.tsx
+
+
+🏦 Mock Banks Data
+
+The project uses a mock list of Nigerian banks stored in:
+
+export const banks: string[] = [
+  'Access Bank',
+  'Citibank Nigeria',
+  'Ecobank Nigeria',
+  'Fidelity Bank',
+  'First Bank of Nigeria',
+  'FCMB',
+  'GTBank',
+  'Kuda Bank',
+  'Moniepoint Microfinance Bank',
+  'Opay',
+  'Palmpay',
+  'UBA',
+  'Zenith Bank'
+]
+
+✅ Form Validation Logic
+
+The form prevents navigation unless:
+
+A bank is selected
+
+Account number is entered
+
+Account name is resolved
+
+Errors are displayed below each input field for better UX.
+
+
+
+📱 Responsive Design
+
+Full width on mobile
+
+Centered with max width on tablet & desktop
+
+Tailwind utility classes ensure consistency across screen sizes
+
+
+⚙️ Installation & Setup
+
+-Clone the repository
+git clone https://github.com/your-username/novacrust.git
+
+-Install dependencies
+npm install
+
+-Start development server
+npm run dev
+or 
+yarn dev
+
+
+🧠 State Management
+
+Global state is handled with Context API, including:
+
+Selected bank
+
+Account number
+
+Account name
+
+Dropdown open/close state
+
+Loading states
+
+This avoids prop drilling and keeps the app scalable.
+
+👨‍💻 Author
+
+Orji Christopher
+Frontend Developer (React & TypeScript)
+
+
+
